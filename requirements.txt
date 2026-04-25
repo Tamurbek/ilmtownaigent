@@ -1,0 +1,5 @@
+aiogram==3.13.1
+notion-client==2.2.1
+python-dotenv==1.0.1
+APScheduler==3.10.4
+pytz==2024.2
