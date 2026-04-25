@@ -13,12 +13,12 @@ class Config:
     """Bot uchun barcha sozlamalar"""
 
     # Telegram Bot
-    BOT_TOKEN: str = os.getenv("BOT_TOKEN", "")
-    ADMIN_TELEGRAM_ID: int = int(os.getenv("ADMIN_TELEGRAM_ID", "0"))
-    ADMIN_GROUP_ID: int = int(os.getenv("ADMIN_GROUP_ID", "0"))
+ BOT_TOKEN: str = os.getenv("8748909852:AAGYaGYW5j1-K5OjP5n-7_FUTf2jPTjQ1rE", "")
+    ADMIN_TELEGRAM_ID: int = int(os.getenv("703665167", "0"))
+    ADMIN_GROUP_ID: int = int(os.getenv("1002782538826", "0"))
 
-    # Notion
-    NOTION_TOKEN: str = os.getenv("NOTION_TOKEN", "")
+  NOTION_TOKEN: str = os.getenv("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", "")
+
 
     # Notion Databases
     DB_SERVICES: str = os.getenv("NOTION_DB_SERVICES", "")
