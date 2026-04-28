@@ -18,11 +18,18 @@ router = Router()
 def admin_only(func):
     """Faqat direktor uchun dekorator"""
 
-    async def wrapper(message: Message, *args, **kwargs):
+    async def wrapper(message: Message, **kwargs):
         if message.from_user.id != config.ADMIN_TELEGRAM_ID:
             await message.answer("⛔ Bu buyruq faqat direktor uchun.")
             return
-        return await func(message, *args, **kwargs)
+        # kwargs (dispatcher, bot va h.k.) ni func ga uzatish
+        # lekin func qabul qiladigan argumentlarni filterlaymiz
+        import inspect
+        sig = inspect.signature(func)
+        valid_kwargs = {
+            k: v for k, v in kwargs.items() if k in sig.parameters
+        }
+        return await func(message, **valid_kwargs)
 
     return wrapper
 

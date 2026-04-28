@@ -33,11 +33,16 @@ def _get_month_range(year: int, month: int) -> tuple[str, str]:
 
 
 def admin_only(func):
-    async def wrapper(message: Message, *args, **kwargs):
+    async def wrapper(message: Message, **kwargs):
         if message.from_user.id != config.ADMIN_TELEGRAM_ID:
             await message.answer("⛔ Bu buyruq faqat direktor uchun.")
             return
-        return await func(message, *args, **kwargs)
+        import inspect
+        sig = inspect.signature(func)
+        valid_kwargs = {
+            k: v for k, v in kwargs.items() if k in sig.parameters
+        }
+        return await func(message, **valid_kwargs)
 
     return wrapper
 
