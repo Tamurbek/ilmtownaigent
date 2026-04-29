@@ -12,10 +12,11 @@ load_dotenv()
 class Config:
     """Bot uchun barcha sozlamalar"""
 
-BOT_TOKEN: str = os.getenv("BOT_TOKEN", "8748909852:AAGJY_C-CE8MKxtm3VPpOPZU3liGiGKO3v4")
-ADMIN_TELEGRAM_ID: int = int(os.getenv("ADMIN_TELEGRAM_ID", "703665167"))
-ADMIN_GROUP_ID: int = int(os.getenv("ADMIN_GROUP_ID", "1002782538826"))
-NOTION_TOKEN: str = os.getenv("NOTION_TOKEN", "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")
+    BOT_TOKEN: str = os.getenv("BOT_TOKEN", "8748909852:AAGJY_C-CE8MKxtm3VPpOPZU3liGiGKO3v4")
+    ADMIN_TELEGRAM_ID: int = int(os.getenv("ADMIN_TELEGRAM_ID", "703665167"))
+    ADMIN_GROUP_ID: int = int(os.getenv("ADMIN_GROUP_ID", "1002782538826"))
+
+    NOTION_TOKEN: str = os.getenv("NOTION_TOKEN", "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")
 
     # Notion Databases
     DB_SERVICES: str = os.getenv("NOTION_DB_SERVICES", "")
