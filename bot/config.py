@@ -18,7 +18,7 @@ class Config:
     ADMIN_GROUP_ID: int = int(os.getenv("ADMIN_GROUP_ID", "1002782538826"))
 
     # Notion
-    NOTION_TOKEN: str = os.getenv("NOTION_TOKEN", "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")
+    NOTION_TOKEN: str = os.getenv("NOTION_TOKEN", "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")
 
     # Notion Databases
     DB_SERVICES: str = os.getenv("NOTION_DB_SERVICES", "")
