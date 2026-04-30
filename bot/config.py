@@ -16,7 +16,7 @@ class Config:
     ADMIN_TELEGRAM_ID: int = int(os.getenv("ADMIN_TELEGRAM_ID", "703665167"))
     ADMIN_GROUP_ID: int = int(os.getenv("ADMIN_GROUP_ID", "1002782538826"))
 
-    NOTION_TOKEN: str = os.getenv("NOTION_TOKEN", "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")
+    NOTION_TOKEN: str = os.getenv("NOTION_TOKEN", "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")
 
     # Notion Databases
     DB_SERVICES: str = os.getenv("NOTION_DB_SERVICES", "249145d9-77df-4cfe-badc-228ab8a57cf6")
